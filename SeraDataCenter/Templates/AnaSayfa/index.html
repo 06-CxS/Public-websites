@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Data Center | Sera Reklam</title>
+
+	{% include 'Base/Headers.html'%}
+
+
+   
+  </head>
+  <body>
+    <div class="container-scroller">
+		
+		<!-- partial:partials/_horizontal-navbar.html -->
+    
+
+		{% include 'Base/Menu.html' %}
+    <!-- partial -->
+		<div class="container-fluid page-body-wrapper">
+			<div class="main-panel">
+				<div class="content-wrapper">
+					<div class="row">
+						<div class="col-sm-12 mb-4 mb-xl-1">
+							<hr>
+							<h3 style="font-weight:bold ;">
+							
+								Genel Bilgilendirme
+							</h3>
+							
+							<hr>
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-success font-weight-bold" style="font-size: 50px;">60</h2>
+										<i class="mdi mdi-account-outline mdi-18px text-dark"></i>
+									</div>
+								</div>
+								<canvas id="newClient"></canvas>
+								<div class="line-chart-row-title">Personel Sayısı</div>
+							</div>
+						</div>
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-danger font-weight-bold" style="font-size: 50px;">681</h2>
+										<i class="mdi mdi-refresh mdi-18px text-dark"></i>
+									</div>
+								</div>
+								<canvas id="allProducts"></canvas>
+								<div class="line-chart-row-title">Ürünler</div>
+							</div>
+						</div>
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-info font-weight-bold" style="font-size: 50px;">3</h2>
+										<i class="mdi mdi-file-document-outline mdi-18px text-dark"></i>
+									</div>
+								</div>
+								<canvas id="invoices"></canvas>
+								<div class="line-chart-row-title">Güncel Rapor</div>
+							</div>
+						</div>
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-warning font-weight-bold">5</h2>
+										<i class="mdi mdi-folder-outline mdi-18px text-dark"></i>
+									</div>
+								</div>
+								<canvas id="projects"></canvas>
+								<div class="line-chart-row-title">Haftalık Magaza Üretim</div>
+							</div>
+						</div>
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-secondary font-weight-bold">3</h2>
+										<i class="mdi mdi-cart-outline mdi-18px text-dark"></i>
+									</div>
+								</div>
+								<canvas id="orderRecieved"></canvas>
+								<div class="line-chart-row-title">Haftalık Montaj</div>
+							</div>
+						</div>
+						<div class="col-lg-2 grid-margin stretch-card">
+							<div class="card">
+								<div class="card-body pb-0">
+									<div class="d-flex align-items-center justify-content-between">
+										<h2 class="text-dark font-weight-bold">18</h2>
+										<i class="mdi mdi-cash text-dark mdi-18px"></i>
+									</div>
+								</div>
+								<canvas id="transactions"></canvas>
+								<div class="line-chart-row-title">Aylık Sevkiyat / Agustos</div>
+							</div>
+						</div>
+					</div>
+					
+
+					<div class="row">
+						<div class="col-sm-8 flex-column d-flex stretch-card">
+							<div class="row">
+								<div class="col-lg-4 d-flex grid-margin stretch-card">
+									
+									<div class="card bg-primary">
+										
+										<div class="card-body text-white">
+											  
+											<h3 class="font-weight-bold mb-3">Veri Alanı</h3>
+											
+											<p class="pb-0 mb-0"> #####</p>
+										
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 d-flex grid-margin stretch-card">
+									<div class="card sale-diffrence-border">
+										<div class="card-body">
+											<h2 class="text-dark mb-2 font-weight-bold">######</h2>
+											<h4 class="card-title mb-2">######</h4>
+											<small class="text-muted">######</small>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 d-flex grid-margin stretch-card">
+									<div class="card sale-visit-statistics-border">
+										<div class="card-body">
+											<h2 class="text-dark mb-2 font-weight-bold">######</h2>
+											<h4 class="card-title mb-2">######</h4>
+											<small class="text-muted">######</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						
+
+						</div>
+						<div class="col-sm-4 flex-column d-flex stretch-card">
+							<div class="row flex-grow">
+								<div class="col-sm-12 grid-margin stretch-card">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col-lg-8">
+													<h3 class="font-weight-bold text-dark">Ankara,Turkey</h3>
+													<p class="text-dark">(Saat Bilgisi)</p>
+													<div class="d-lg-flex align-items-baseline mb-3">
+														<h1 class="text-dark font-weight-bold">28<sup class="font-weight-light"><small>o</small><small class="font-weight-medium">c</small></sup></h1>
+														<p class="text-muted ms-3">Sıcalık</p>
+													</div>
+												</div>
+												<div class="col-lg-4">
+													<div class="position-relative">
+														<img src="images/dashboard/live.png" class="w-100" alt="">
+														<div class="live-info badge badge-success">Live</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-12 mt-4 mt-lg-0">
+													<div class="bg-primary text-white px-4 py-4 card">
+														<div class="row">
+															<div class="col-sm-6 pl-lg-5">
+																<h2>2.894.452 TL</h2>
+																<p class="mb-0">Aylık Gelir</p>
+															</div>
+															<div class="col-sm-6 climate-info-border mt-lg-0 mt-2">
+																<h2>1.856.487 TL</h2>
+																<p class="mb-0">Aylık Gider</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row pt-3 mt-md-1">
+												<div class="col">
+													<div class="d-flex purchase-detail-legend align-items-center">
+														<div id="circleProgress1" class="p-2"></div>
+														<div>
+															<p class="font-weight-medium text-dark text-small">Gider</p>
+															<h3 class="font-weight-bold text-dark  mb-0">10%</h3>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="d-flex purchase-detail-legend align-items-center">
+														<div id="circleProgress2" class="p-2"></div>
+														<div>
+															<p class="font-weight-medium text-dark text-small">Gelir</p>
+															<h3 class="font-weight-bold text-dark  mb-0">12.80%</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					
+					
+					
+				</div>
+				<!-- content-wrapper ends -->
+
+
+				<!-- partial:partials/_footer.html -->
+				<footer class="footer">
+          <div class="footer-wrap bg-light">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © All Right Reserverd | Ömer ÖZYÜREK  2022</span>
+			  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Version  1.0.0 </span>
+            </div>
+          </div>
+        </footer>
+				<!-- partial -->
+			</div>
+			<!-- main-panel ends -->
+		</div>
+		<!-- page-body-wrapper ends -->
+    </div>
+		<!-- container-scroller -->
+    <!-- base:js -->
+
+	{% include 'Base/JavaCodes.html'%}
+
+  </body>
+</html>

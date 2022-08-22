@@ -1,0 +1,77 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+
+  
+<div class="horizontal-menu">
+    <nav class="navbar top-navbar col-lg-12 col-12 p-0 bg-light ">
+      <div class="container-fluid">
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between justify-content-center" style="height: 50px; text-align: center;">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-12 d-flex align-items-center  justify-content-sm-between justify-content-between" style="color:red ; font-weight: bold;">
+                         <a href="{% url 'Home'%}">  ANA SAYFA </a>
+                  </div> 
+                </div>
+            </div>
+        </div>
+        </div>    
+    </nav>
+
+    <nav class="bottom-navbar"  style="height: 70;">
+      <div class="container">
+          <ul class="nav page-navigation" >
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'RaporAnaSayfa'%}">
+                <i class="mdi mdi-file-document-box menu-icon"></i>
+                <span class="menu-title">Üretim</span>
+              </a>
+            </li>
+
+            
+            <li class="nav-item">
+                <a href="{% url 'GunlukMuhasebe'%}" class="nav-link">
+                  <i class="mdi mdi-finance menu-icon"></i>
+                  <span class="menu-title">Muhasebe</span>
+                  <i class="menu-arrow"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/tables/basic-.html" class="nav-link">
+                  <i class="mdi mdi-grid menu-icon"></i>
+                  <span class="menu-title">Proje</span>
+                  <i class="menu-arrow"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/icons/mdi.html" class="nav-link">
+                  <i class="mdi mdi-emoticon menu-icon"></i>
+                  <span class="menu-title">Fabrika</span>
+                  <i class="menu-arrow"></i>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="docs/documentation.html" class="nav-link">
+                  <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                  <span class="menu-title">E-Ticaret </span></a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+  </div>
+
+</body>
+</html>
+
