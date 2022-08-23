@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hg3bnq&%stc5m_8xihd-$fp4k7y0j#!f32#y4j@+ld4)m78c9v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["34.175.219.103","127.0.0.1"]
 
 
 # Application definition
@@ -114,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'TR-tr'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Europe/Istanbul'
 
@@ -127,12 +127,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
 
-    BASE_DIR / 'static'
-]
+if DEBUG:
+    STATICFILES_DIRS = [BASE_DIR / 'static']
+
+else:
+
+    STATIK_ROOT  = "/var/www/Public-websites/SeraDataCenter/static"    
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# '/var/www/Public-websites/SeraDataCenter/SeraDataCenter/static'
