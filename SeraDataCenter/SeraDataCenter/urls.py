@@ -20,5 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include("AnaSayfa.urls")),
     path('Rapor/',include("Rapor.urls")),
+    path('Uretim/',include("Uretim.urls")),
+    path('Muhasebe/',include("Muhasebe.urls")),
+    path('Sevkiyat/',include("Sevkiyat.urls")),
     
 ]

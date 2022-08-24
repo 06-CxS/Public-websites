@@ -1,8 +1,5 @@
 {% load static %}
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +150,7 @@
       <div class="container">
           <ul class="nav page-navigation" >
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{% url 'Home'%}">
                 <i class="mdi mdi-file-document-box menu-icon"></i>
                 <span class="menu-title">Ana Sayfa</span>
               </a>
@@ -168,8 +165,8 @@
               <div class="submenu">
                   <ul>
                       <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/buttons.html">Bölümler</a></li>
-                      <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Üretim Durumu</a></li>
+                        <a class="nav-link" href="{% url 'UretimHome' %}">Üretim Takvimi</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'Bolumler' %}">Üretim Bölümleri</a></li>
                   </ul>
               </div>
           </li>
@@ -186,11 +183,19 @@
               <div class="submenu">
                   <ul>
                       <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/buttons.html">Bölümler</a></li>
-                      <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Üretim Durumu</a></li>
+                        <a class="nav-link" href="{% url 'M_Alim'%}">Alım</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'M_Satim'%}">Satım</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'GenelMuhasebe'%}">Muhasebe Durumu</a>
+                      </li>
                   </ul>
               </div>
           </li>
+
+          
           <!-- MUHASEBE SON ############## -->
           <!--===================================================================================================================== -->
                     <!--===================================================================================================================== -->
@@ -205,8 +210,11 @@
               <div class="submenu">
                   <ul>
                       <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/buttons.html">Bölümler</a></li>
-                      <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Üretim Durumu</a></li>
+                        <a class="nav-link" href="{% url 'SevkTarih' %}">Sevkiyat Takvimi</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'SevkDurum'%}">Sevkiyat Durumu</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'GenelSevkiyat'%}">Personel / Araç Durumu</a></li>
                   </ul>
               </div>
           </li>
@@ -225,6 +233,18 @@
                   <span class="menu-title">Fabrika</span>
                   <i class="menu-arrow"></i>
                 </a>
+                <div class="submenu">
+                  <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/buttons.html">Personel</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/typography.html">Depo</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages/ui-features/typography.html">Ekipman</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="pages/ui-features/typography.html">Araç</a></li>
+                  </ul>
+              </div>
             </li>
             <li class="nav-item">
                 <a href="pages/icons/mdi.html" class="nav-link">
@@ -232,6 +252,7 @@
                   <span class="menu-title">Musteriler</span>
                   <i class="menu-arrow"></i>
                 </a>
+                
             </li>
             
             <li class="nav-item">
@@ -239,6 +260,32 @@
                   <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                   <span class="menu-title">E-Ticaret </span></a>
             </li>
+
+            <li class="nav-item">
+              <a href="pages/tables/basic-table.html" class="nav-link">
+                <i class="mdi mdi-grid menu-icon"></i>
+                <span class="menu-title">Uygulamalar</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="submenu">
+                <ul>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/ui-features/buttons.html">Teknik Servis</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages/ui-features/buttons.html">Chat</a></li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages/ui-features/typography.html">Dosya Aktarımı</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/typography.html">Mail</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages/ui-features/typography.html">Araç Takip</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="pages/ui-features/typography.html">Personel Takip</a></li>
+                </ul>
+            </div>
+          </li>  
+          
+          </li>
           </ul>
       </div>
     </nav>
