@@ -1,0 +1,1520 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataCenter | Rapor</title>
+
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{% static 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+
+
+  {% include 'Base/Headers.html'%}
+
+
+
+</head>
+
+
+
+<body >
+
+  {% include 'Base/RaporMenu.html'%}
+<div class="wrapper">
+<hr>
+ <!-- /. BORÇLAR BASLANGIG  -->
+  <div class="content-fluid p-2 m-2" style="background-color: #e9d1ff;">
+   
+     <!-- Content Header (Page header) -->
+     <section class="content-header">
+        <div class="container-fluid">
+          <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4 text-left">
+                    <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(255, 29, 29);"> Borçlar</p>
+                    
+                </div>
+                <div class="col-sm-4 text-center">
+                    <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+                </div>
+                <div class="col-sm-4 text-right">
+                    <a href="{% url 'M_GunlukRapor'%}" class="btn btn-danger btn-sm  " role="button" aria-disabled="true">Günlük</a>
+                    <a href="{% url 'M_HaftalıkRapor'%}" class="btn btn-primary btn-sm " role="button" aria-disabled="true">Haftalık</a>
+                    <a href="{% url 'M_AylıkRapor'%}" class="btn btn-success btn-sm " role="button" aria-disabled="true">Aylık</a>
+                </div>
+
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+    </section>
+  
+    <hr>
+    <!-- Banka BORÇLAR -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header" style="height: auto;">
+                        
+                    <div class="container">
+                     <div class="row">
+                        <div class="col-sm-6">
+                          <small style="color: white; font-weight: bold; font-size: large;" > Banka Kredileri </small>
+                          
+                        </div>
+                        <div class="col-sm-6  text-left ">
+                          <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Banka </small>
+                        </div>
+
+                     </div>
+
+                    </div>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+
+                  <div class="card" style="background-color:rgb(246, 232, 253);">
+                    
+                    <div class="card-body">
+                      <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                        <thead >
+                        <tr style="background-color:rgb(255, 185, 185) ;">
+                          <th style="font-weight: bold;">KURUM / Firma </th>
+                          <th>Türk Lirası</th>
+                          <th>Dolar</th>
+                          <th>Euro</th>
+                          <th>Diger</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th  scope="col">Garanti Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                            <th  scope="col">Yapı Kredi Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col"> Vakıfbank</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Ziraat Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Halkbank</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                          <th style="color:red ;">Toplam BORÇ</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                        </tr>
+                        </tfoot>
+                      </table>
+                      <hr>
+                    </div>
+      
+                    <!-- /.card-body -->
+                  </div>
+
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+
+            <!-- /.card -->
+         
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+     <!-- Banka BORÇLAR -->
+
+    
+
+
+      <!-- Ticari Borçlar  -->
+     <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header" style="height: auto;">
+                        
+                    <div class="container">
+                     <div class="row">
+                        <div class="col-sm-6">
+                          <small style="color: white; font-weight: bold; font-size: large;" > Ticari Borçlar Borçları </small>
+                          
+                        </div>
+                        <div class="col-sm-6  text-left ">
+                          <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Kurum Bilgileri </small>
+                        </div>
+
+                     </div>
+
+                    </div>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+
+                  <div class="card" style="background-color:rgb(246, 232, 253);">
+                    
+                    <div class="card-body">
+                      <table id="Krediler" class="table table-bordered table-striped bg-gradient-light">
+                        <thead >
+                        <tr style="background-color:rgb(255, 185, 185) ;">
+                          <th style="font-weight: bold;">KURUM </th>
+                          <th>Türk Lirası</th>
+                          <th>Dolar</th>
+                          <th>Euro</th>
+                          <th>Diger</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th  scope="col">Garanti Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                            <th  scope="col">Yapı Kredi Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col"> Vakıfbank</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Ziraat Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Halkbank</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                         
+
+                        </tbody>
+                        <tfoot style="color: red;">
+                        <tr>
+                          <th>Toplam BORÇ</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                        </tr>
+                        </tfoot>
+                      </table>
+                      <hr>
+                    </div>
+      
+                    <!-- /.card-body -->
+                  </div>
+
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+
+            <!-- /.card -->
+         
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+     <!-- Ticari Borçlar  -->
+
+     
+    
+       <!-- Çekler  -->
+     <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header" style="height: auto;">
+                        
+                    <div class="container">
+                     <div class="row">
+                        <div class="col-sm-6">
+                          <small style="color: white; font-weight: bold; font-size: large;" > Çekler </small>
+                          
+                        </div>
+                        <div class="col-sm-6  text-left ">
+                          <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > (Ay Bilgisi ) Ödenecek Çekler </small>
+                        </div>
+
+                     </div>
+
+                    </div>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+
+                  <div class="card" style="background-color:rgb(246, 232, 253);">
+                    
+                    <div class="card-body">
+                      <table id="Cekler" class="table table-bordered table-striped bg-gradient-light">
+                        <thead >
+                        <tr style="background-color:rgb(255, 185, 185) ;">
+                          <th style="font-weight: bold;">KURUM </th>
+                          <th>Türk Lirası</th>
+                          <th>Dolar</th>
+                          <th>Euro</th>
+                          <th>Diger</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th  scope="col">Garanti Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                            <th  scope="col">Yapı Kredi Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                         
+
+                        </tbody>
+                        <tfoot style="color: red;">
+                        <tr>
+                          <th>Toplam Ödenecek Çekler</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                        </tr>
+                        </tfoot>
+                      </table>
+                      <hr>
+                    </div>
+      
+                    <!-- /.card-body -->
+                  </div>
+
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+
+            <!-- /.card -->
+         
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+
+
+
+
+
+  </div>
+  <!-- /. BORÇLAR BİTİŞ  -->
+ 
+  <!--************************************************************************************************************* -->
+
+  
+  <hr style="color:red ;">
+ 
+  <!-- /. ALACAKLAR BASLANGIG  -->
+  <div class="content-fluid p-2 m-2" style="background-color: #7cf6ff;">
+   
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <div class="container-fluid">
+         <div class="col-sm-12">
+           <div class="row">
+               <div class="col-sm-4 text-left">
+                   <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(255, 29, 29);">Varlıklar</p>
+                   
+               </div>
+               <div class="col-sm-4 text-center">
+                   <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+               </div>
+               <div class="col-sm-4 text-right">
+                  
+               </div>
+
+           </div>
+         </div>
+       </div><!-- /.container-fluid -->
+   </section>
+ 
+   <hr>
+
+   <!-- Banka Varlıklar  -->
+   <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-success">
+                <div class="card-header" style="height: auto;">
+                      
+                  <div class="container">
+                   <div class="row">
+                      <div class="col-sm-6">
+                        <small style="color: white; font-weight: bold; font-size: large;" > Banka Varlıklar </small>
+                        
+                      </div>
+                      <div class="col-sm-6  text-left ">
+                        <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Bankalar </small>
+                      </div>
+
+                   </div>
+
+                  </div>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card" style="background-color:rgb(246, 232, 253);">
+                  
+                  <div class="card-body">
+                    <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                      <thead >
+                      <tr style="background-color:rgb(255, 185, 185) ;">
+                        <th style="font-weight: bold;">KURUM / Firma </th>
+                        <th>Türk Lirası</th>
+                        <th>Dolar</th>
+                        <th>Euro</th>
+                        <th>Diger</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th  scope="col">Garanti Bankası</th>
+                        <td>800</td>
+                        <td>5000</td>
+                        <td>30000</td>
+                        <td>#</td>
+                      </tr>
+                      <tr>
+                          <th  scope="col">Yapı Kredi Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col"> Vakıfbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Ziraat Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Halkbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        
+
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th>Toplam BORÇ</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                      </tfoot>
+                    </table>
+                    <hr>
+                  </div>
+    
+                  <!-- /.card-body -->
+                </div>
+
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+
+          <!-- /.card -->
+       
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </section>
+   <!-- Banka Varlıklar  -->
+
+
+   <!-- Ticari Alacaklar -->
+   <section class="content">
+     <div class="container-fluid">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="card card-success">
+                 <div class="card-header" style="height: auto;">
+                       
+                   <div class="container">
+                    <div class="row">
+                       <div class="col-sm-6">
+                         <small style="color: white; font-weight: bold; font-size: large;" > Ticari Alacaklar </small>
+                         
+                       </div>
+                       <div class="col-sm-6  text-left ">
+                         <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Alacaklar </small>
+                       </div>
+
+                    </div>
+
+                   </div>
+                   <div class="card-tools">
+                     <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                       <i class="fas fa-sync-alt"></i>
+                     </button>
+                     <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                       <i class="fas fa-expand"></i>
+                     </button>
+                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                       <i class="fas fa-minus"></i>
+                     </button>
+                     <button type="button" class="btn btn-tool" data-card-widget="remove">
+                       <i class="fas fa-times"></i>
+                     </button>
+                   </div>
+                   <!-- /.card-tools -->
+                 </div>
+                 <!-- /.card-header -->
+
+                 <div class="card" style="background-color:rgb(246, 232, 253);">
+                   
+                   <div class="card-body">
+                     <table id="Alacak" class="table table-bordered table-striped bg-gradient-light">
+                       <thead >
+                       <tr style="background-color:rgb(255, 185, 185) ;">
+                         <th style="font-weight: bold;">KURUM / Firma </th>
+                         <th>Türk Lirası</th>
+                         <th>Dolar</th>
+                         <th>Euro</th>
+                         <th>Diger</th>
+                       </tr>
+                       </thead>
+                       <tbody>
+                       <tr>
+                         <th  scope="col">Garanti Bankası</th>
+                         <td>800</td>
+                         <td>5000</td>
+                         <td>30000</td>
+                         <td>#</td>
+                       </tr>
+                       <tr>
+                           <th  scope="col">Yapı Kredi Bankası</th>
+                           <td>800</td>
+                           <td>5000</td>
+                           <td>30000</td>
+                           <td>#</td>
+                         </tr>
+                         <tr>
+                           <th  scope="col"> Vakıfbank</th>
+                           <td>800</td>
+                           <td>5000</td>
+                           <td>30000</td>
+                           <td>#</td>
+                         </tr>
+                         <tr>
+                           <th  scope="col">Ziraat Bankası</th>
+                           <td>800</td>
+                           <td>5000</td>
+                           <td>30000</td>
+                           <td>#</td>
+                         </tr>
+                         <tr>
+                           <th  scope="col">Halkbank</th>
+                           <td>800</td>
+                           <td>5000</td>
+                           <td>30000</td>
+                           <td>#</td>
+                         </tr>
+                         <tr>
+                           <th  scope="col">SDS</th>
+                           <td>800</td>
+                           <td>5000</td>
+                           <td>30000</td>
+                           <td>#</td>
+                         </tr>
+
+                       </tbody>
+                       <tfoot>
+                       <tr>
+                         <th>Toplam BORÇ</th>
+                         <th>#</th>
+                         <th>#</th>
+                         <th>#</th>
+                         <th>#</th>
+                       </tr>
+                       </tfoot>
+                     </table>
+                     <hr>
+                   </div>
+     
+                   <!-- /.card-body -->
+                 </div>
+
+                 <!-- /.card-body -->
+               </div>
+               <!-- /.card -->
+             </div>
+
+           <!-- /.card -->
+        
+         <!-- /.col -->
+       </div>
+       <!-- /.row -->
+     </div>
+   </section>
+    <!-- Ticari  Alacaklar -->
+
+
+       <!-- ÇEKLER -->
+   <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-success">
+                <div class="card-header" style="height: auto;">
+                      
+                  <div class="container">
+                   <div class="row">
+                      <div class="col-sm-6">
+                        <small style="color: white; font-weight: bold; font-size: large;" > Çekler </small>
+                        
+                      </div>
+                      <div class="col-sm-6  text-left ">
+                        <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Aylık Alınacak Çekler </small>
+                      </div>
+
+                   </div>
+
+                  </div>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card" style="background-color:rgb(246, 232, 253);">
+                  
+                  <div class="card-body">
+                    <table id="Alacak" class="table table-bordered table-striped bg-gradient-light">
+                      <thead >
+                      <tr style="background-color:rgb(255, 185, 185) ;">
+                        <th style="font-weight: bold;">KURUM / Firma </th>
+                        <th>Türk Lirası</th>
+                        <th>Dolar</th>
+                        <th>Euro</th>
+                        <th>Diger</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th  scope="col">Garanti Bankası</th>
+                        <td>800</td>
+                        <td>5000</td>
+                        <td>30000</td>
+                        <td>#</td>
+                      </tr>
+                      <tr>
+                          <th  scope="col">Yapı Kredi Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col"> Vakıfbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Ziraat Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Halkbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">SDS</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th>Toplam BORÇ</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                      </tfoot>
+                    </table>
+                    <hr>
+                  </div>
+    
+                  <!-- /.card-body -->
+                </div>
+
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+
+          <!-- /.card -->
+       
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </section>
+   <!-- ÇEKLER -->
+
+
+ </div>
+ <hr style="color:red ;">
+
+  <!-- /. Gunluk Kesilen Faturalar  -->
+  <div class="content-fluid p-2 m-2" style="background-color: #66ffb8;">
+   
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <div class="container-fluid">
+         <div class="col-sm-12">
+           <div class="row">
+               <div class="col-sm-4 text-left">
+                   <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(255, 29, 29);">Faturalar</p>
+                   
+               </div>
+               <div class="col-sm-4 text-center">
+                   <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+               </div>
+               <div class="col-sm-4 text-right">
+                  
+               </div>
+
+           </div>
+         </div>
+       </div><!-- /.container-fluid -->
+   </section>
+ 
+   <hr>
+
+   <!-- FATURALAR  -->
+   <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-success">
+                <div class="card-header" style="height: auto;">
+                      
+                  <div class="container">
+                   <div class="row">
+                      <div class="col-sm-6">
+                        <small style="color: white; font-weight: bold; font-size: large;" > Günlük Kesilen Faturalar </small>
+                        
+                      </div>
+                      <div class="col-sm-6  text-left ">
+                        <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Kurumlar </small>
+                      </div>
+
+                   </div>
+
+                  </div>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card" style="background-color:rgb(246, 232, 253);">
+                  
+                  <div class="card-body">
+                    <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                      <thead >
+                      <tr style="background-color:rgb(255, 185, 185) ;">
+                        <th style="font-weight: bold;">KURUM / Firma </th>
+                        <th>Türk Lirası</th>
+                        <th>Dolar</th>
+                        <th>Euro</th>
+                        <th>Diger</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th  scope="col">Garanti Bankası</th>
+                        <td>800</td>
+                        <td>5000</td>
+                        <td>30000</td>
+                        <td>#</td>
+                      </tr>
+                      <tr>
+                          <th  scope="col">Yapı Kredi Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col"> Vakıfbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Ziraat Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Halkbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        
+
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th>Toplam BORÇ</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                      </tfoot>
+                    </table>
+                    <hr>
+                  </div>
+    
+                  <!-- /.card-body -->
+                </div>
+
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+
+          <!-- /.card -->
+       
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </section>
+   <!-- FATURALAR  -->
+
+ </div>
+
+ <hr style="color:red ;">
+  <!-- /. Gunluk Gider  -->
+  <div class="content-fluid p-2 m-2" style="background-color: #e4ff84;">
+   
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <div class="container-fluid">
+         <div class="col-sm-12">
+           <div class="row">
+               <div class="col-sm-4 text-left">
+                   <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(255, 29, 29);">Günlük Gider</p>
+                   
+               </div>
+               <div class="col-sm-4 text-center">
+                   <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+               </div>
+               <div class="col-sm-4 text-right">
+                  
+               </div>
+
+           </div>
+         </div>
+       </div><!-- /.container-fluid -->
+   </section>
+ 
+   <hr>
+
+   <!-- FATURALAR  -->
+   <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-success">
+                <div class="card-header" style="height: auto;">
+                      
+                  <div class="container">
+                   <div class="row">
+                      <div class="col-sm-6">
+                        <small style="color: white; font-weight: bold; font-size: large;" > Günlük Gider Bilgisi </small>
+                        
+                      </div>
+                      <div class="col-sm-6  text-left ">
+                        <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Kurumlar </small>
+                      </div>
+
+                   </div>
+
+                  </div>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card" style="background-color:rgb(246, 232, 253);">
+                  
+                  <div class="card-body">
+                    <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                      <thead >
+                      <tr style="background-color:rgb(255, 185, 185) ;">
+                        <th style="font-weight: bold;">KURUM / Firma </th>
+                        <th>Türk Lirası</th>
+                        <th>Dolar</th>
+                        <th>Euro</th>
+                        <th>Diger</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th  scope="col">Garanti Bankası</th>
+                        <td>800</td>
+                        <td>5000</td>
+                        <td>30000</td>
+                        <td>#</td>
+                      </tr>
+                      <tr>
+                          <th  scope="col">Yapı Kredi Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col"> Vakıfbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Ziraat Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Halkbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        
+
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th>Toplam BORÇ</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                      </tfoot>
+                    </table>
+                    <hr>
+                  </div>
+    
+                  <!-- /.card-body -->
+                </div>
+
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+
+          <!-- /.card -->
+       
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </section>
+   <!-- FATURALAR  -->
+
+ </div>
+
+ <hr style="color:red ;">
+   <!-- /. Gunluk Gelir  -->
+   <div class="content-fluid p-2 m-2" style="background-color: #66ffb8;">
+   
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <div class="container-fluid">
+         <div class="col-sm-12">
+           <div class="row">
+               <div class="col-sm-4 text-left">
+                   <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(255, 29, 29);">Günlük Gelir</p>
+                   
+               </div>
+               <div class="col-sm-4 text-center">
+                   <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+               </div>
+               <div class="col-sm-4 text-right">
+                  
+               </div>
+
+           </div>
+         </div>
+       </div><!-- /.container-fluid -->
+   </section>
+ 
+   <hr>
+
+   <!-- Günlük Gelir  -->
+   <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card card-success">
+                <div class="card-header" style="height: auto;">
+                      
+                  <div class="container">
+                   <div class="row">
+                      <div class="col-sm-6">
+                        <small style="color: white; font-weight: bold; font-size: large;" > Günlük Gelir Bilgisi </small>
+                        
+                      </div>
+                      <div class="col-sm-6  text-left ">
+                        <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" > Kurumlar </small>
+                      </div>
+
+                   </div>
+
+                  </div>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                      <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+
+                <div class="card" style="background-color:rgb(246, 232, 253);">
+                  
+                  <div class="card-body">
+                    <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                      <thead >
+                      <tr style="background-color:rgb(255, 185, 185) ;">
+                        <th style="font-weight: bold;">KURUM / Firma </th>
+                        <th>Türk Lirası</th>
+                        <th>Dolar</th>
+                        <th>Euro</th>
+                        <th>Diger</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <th  scope="col">Garanti Bankası</th>
+                        <td>800</td>
+                        <td>5000</td>
+                        <td>30000</td>
+                        <td>#</td>
+                      </tr>
+                      <tr>
+                          <th  scope="col">Yapı Kredi Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col"> Vakıfbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Ziraat Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                          <th  scope="col">Halkbank</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        
+
+                      </tbody>
+                      <tfoot>
+                      <tr>
+                        <th>Toplam BORÇ</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                        <th>#</th>
+                      </tr>
+                      </tfoot>
+                    </table>
+                    <hr>
+                  </div>
+    
+                  <!-- /.card-body -->
+                </div>
+
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+
+          <!-- /.card -->
+       
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+  </section>
+   <!-- Günlük Gelir  -->
+
+ </div>
+
+ 
+ <hr style="color:red ;">
+    <!-- /. KASA  -->
+    <div class="content-fluid p-2 m-3" style="background-color: #ffffff;">
+   
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+         <div class="container-fluid">
+           <div class="col-sm-12">
+             <div class="row">
+                 <div class="col-sm-4 text-left">
+                     <p style="font-size:20px ; font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(121, 0, 0);">Günlük Kasa Bilgisi</p>
+                     
+                 </div>
+                 <div class="col-sm-4 text-center">
+                     <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: brown;" >Rapor Tarihi : 01/09/2022</p>
+                 </div>
+                 <div class="col-sm-4 text-right">
+                    
+                 </div>
+  
+             </div>
+           </div>
+         </div><!-- /.container-fluid -->
+     </section>
+   
+     <hr>
+  
+     <!-- FATURALAR  -->
+     <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header" style="height: auto;">
+                        
+                    <div class="container">
+                     <div class="row">
+                        <div class="col-sm-6">
+                          <small style="color: white; font-weight: bold; font-size: large;" > </small>
+                          
+                        </div>
+                        <div class="col-sm-6  text-left ">
+                          <small style="color: rgb(0, 0, 0); font-weight: bold; font-size: x-large;" >  KASA </small>
+                        </div>
+  
+                     </div>
+  
+                    </div>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+  
+                  <div class="card" style="background-color:rgb(246, 232, 253);">
+                    
+                    <div class="card-body">
+                      <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                        <thead >
+                        <tr style="background-color:rgb(255, 185, 185) ;">
+                          <th style="font-weight: bold;"> Bigiler </th>
+                          <th>Önceki Bakiye</th>
+                          <th>Giriş</th>
+                          <th>Çıkış</th>
+                          <th>Bugunlük Bakiye</th>
+                          <th style="color: red;">Toplam</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th  scope="col">Günlük Kasa Haraket Toplamlar</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                            <th  scope="col">Günlük Banka Hareket Toplamı</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          
+                     
+                      </table>
+                      <hr>
+                    </div>
+      
+                    <!-- /.card-body -->
+                  </div>
+  
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+  
+            <!-- /.card -->
+         
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+     <!-- FATURALAR  -->
+  
+   </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- ./wrapper -->
+{% include 'Base/Footer.html' %}
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- DataTables  & Plugins -->
+<script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/jszip/jszip.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/pdfmake.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/vfs_fonts.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+
+
+<script>
+    $(function () {
+      $("#kasa").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": ["excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#kasa_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+<script>
+    $(function () {
+      $("#Firmalar").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": ["excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#test2_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+<script>
+    $(function () {
+      $("#Krediler").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": [ "excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#Krediler_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+  
+<script>
+  $(function () {
+    $("#Cekler").DataTable({
+      "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+      "buttons": [ "excel", "pdf", "print", ]
+    }).buttons().container().appendTo('#Cekler_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+<script>
+  $(function () {
+    $("#Alacak").DataTable({
+      "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+      "buttons": [ "excel", "pdf", "print", ]
+    }).buttons().container().appendTo('#Alacak_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -8,3 +8,7 @@ def Uretimindex(request):
 def UretimBolumleri(request):
     return render(request,"Uretim/Bolumler.html")
 
+
+def SiparisTakip(request):
+    return render(request,"Uretim/SiparisTakip.html")
+    

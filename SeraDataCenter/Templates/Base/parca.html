@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between" style="height: 50px;">
+          
+        <ul class="navbar-nav navbar-nav-left " style="background-color: red;">
+         <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12 offset-md-2 ">
+                <form action="simple-results.html">
+                    <div class="input-group">
+                        <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-lg btn-default">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+         </div>
+        </ul>
+        
+  
+  
+  
+  
+        <ul class="navbar-nav navbar-nav-center" style="background-color:blue ;">
+           <li class="nav-item dropdown  d-lg-flex d-none">
+            
+            <a href="#" class="nav-link horizontal-nav-left-menu"> ANASAYFA<i class=""></i></a>
+
+          </li>   
+      </ul>
+
+
+        <ul class="navbar-nav navbar-nav-right" style="background-color: blanchedalmond;">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="mdi mdi-bell mx-0 " style="color:rgb(255, 0, 149);"> </i>
+              <span class="count bg-primary">5</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Bildirimler</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-information mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal"> BİLDİRİM 1</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      ÜRETİM
+                    </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-settings mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">BİLDİRİM 2</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      ÜRETİM
+                    </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-account-box mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal"> BİLDİRİM 3</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      MUHASEBE
+                    </p>
+                </div>
+              </a>
+            </div>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+              <i class="mdi mdi-bell mx-0 " style="color:rgb(255, 0, 149);"> </i>
+              <span class="count bg-primary">5</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Bildirimler</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-information mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal"> BİLDİRİM 1</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      ÜRETİM
+                    </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-settings mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal">BİLDİRİM 2</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      ÜRETİM
+                    </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-account-box mx-0"></i>
+                    </div>
+                </div>
+                <div class="preview-item-content">
+                    <h6 class="preview-subject font-weight-normal"> BİLDİRİM 3</h6>
+                    <p class="font-weight-light small-text mb-0 text-muted">
+                      MUHASEBE
+                    </p>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- PROFİLE -->
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                <span class="nav-profile-name">Ömer ÖZYÜREK</span>
+                <span class="online-status"></span>
+               
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                  <a class="dropdown-item">
+                    <i class="mdi mdi-settings text-primary"></i>
+                    Ayarlar
+                  </a>
+                  <a class="dropdown-item">
+                    <i class="mdi mdi-logout text-primary"></i>
+                    Çıkış
+                  </a>
+              </div>
+            </li>
+        </ul>
+        
+
+        
+      </div>
+
+
+
+
+
+
+
+
+
+      <ul class="navbar-nav">
+          
+        <a href="../../index3.html" class="navbar-brand">
+          <span class="brand-text font-weight-light"> DATA CENTER | SERA REKLAM </span>
+        </a>
+      </li>
+      
+    </ul>
+
+   
+    <form class="form-inline ml-0 ml-md-6 justify-content-between justify-content-center">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  
+
+
+  <!-- Right navbar links  ICONLAR -->
+  <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+    <!-- Messages Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="fas fa-comments"></i>
+        <span class="badge badge-danger navbar-badge">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Brad Diesel
+                <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">Call me whenever you can...</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                John Pierce
+                <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">I got your message bro</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <!-- Message Start -->
+          <div class="media">
+            <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+            <div class="media-body">
+              <h3 class="dropdown-item-title">
+                Nora Silvester
+                <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+              </h3>
+              <p class="text-sm">The subject goes here</p>
+              <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+            </div>
+          </div>
+          <!-- Message End -->
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+      </div>
+    </li>
+    <!-- Notifications Dropdown Menu -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="far fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <span class="dropdown-header">15 Notifications</span>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-envelope mr-2"></i> 4 new messages
+          <span class="float-right text-muted text-sm">3 mins</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-users mr-2"></i> 8 friend requests
+          <span class="float-right text-muted text-sm">12 hours</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">
+          <i class="fas fa-file mr-2"></i> 3 new reports
+          <span class="float-right text-muted text-sm">2 days</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+        <i class="fas fa-th-large"></i>
+      </a>
+    </li>
+  </ul>
+
+
+
+
+
+
+
+
+
+    
+<div class="horizontal-menu">
+
+    <nav class="main-header navbar navbar-expand-md" style="background: rgb(166, 88, 255); height: 45px;">
+      <div class="container-fluid">
+        <div class="col-sm-12">
+          
+          <div class="row">
+            <div class="col-sm-4 text-left">
+              <p class="text-left">
+                Asd
+              </p>
+            </div>
+  
+            <!-- SEARCH -->
+            <div class="col-sm-4 text-center ">
+              <form class="form-inline ml-0 ml-md-6 justify-content-between justify-content-center">
+                <div class="input-group input-group-sm">
+                  <input class="form-control form-control-navbar" type="search" placeholder="Size Nasıl Yardımcı Olabilirim ? " aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+  
+  
+            <!-- ICONLAR MENU -->
+            
+            <div class="col-sm-4 text-end align-items-end">
+             
+  
+            </div>  
+  
+          </div>
+        </div>  
+        
+  
+      </div>
+    </nav>
+  
+      <!-- ========================================================================== -->
+  
+        <nav class="bottom-navbar "  style="height: 70px;">
+        <div class="container">
+            <ul class="nav page-navigation" >
+              <li class="nav-item ">
+                <a class="nav-link" href="{% url 'Home'%}">
+                  <i class="mdi mdi-file-document-box menu-icon"></i>
+                  <span class="menu-title">Ana Sayfa</span>
+                </a>
+              </li>
+              <!-- ÜRETİM ############ -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="mdi mdi-cube-outline menu-icon"></i>
+                  <span class="menu-title">Üretim</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <ul>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'UretimHome' %}">Üretim Takvimi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Bolumler' %}">Üretim Bölümleri</a></li>
+                    </ul>
+                </div>
+            </li>
+              <!-- ÜRETİM SON ########### -->
+            <!--===================================================================================================================== -->
+              <!-- MUHASEBE ############## -->
+  
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="mdi mdi-chart-areaspline menu-icon"></i>
+                  <span class="menu-title">Muhasebe</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <ul>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'M_Alim'%}">Alım</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'M_Satim'%}">Satım</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'GenelMuhasebe'%}">Muhasebe Durumu</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+  
+            
+            <!-- MUHASEBE SON ############## -->
+            <!--===================================================================================================================== -->
+                      <!--===================================================================================================================== -->
+              <!-- MUHASEBE ############## -->
+  
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="mdi mdi-chart-areaspline menu-icon"></i>
+                  <span class="menu-title">Sevkiyat</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                    <ul>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'SevkTarih' %}">Sevkiyat Takvimi</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'SevkDurum'%}">Sevkiyat Durumu</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'GenelSevkiyat'%}">Personel / Araç Durumu</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!-- MUHASEBE SON ############## -->
+            <!--===================================================================================================================== -->
+              <li class="nav-item">
+                  <a href="pages/charts/chartjs.html" class="nav-link">
+                    <i class="mdi mdi-finance menu-icon"></i>
+                    <span class="menu-title">Proje</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="pages/tables/basic-table.html" class="nav-link">
+                    <i class="mdi mdi-grid menu-icon"></i>
+                    <span class="menu-title">Fabrika</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  <div class="submenu">
+                    <ul>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'Takvim'%}">Personel</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages/ui-features/typography.html">Depo</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="pages/ui-features/typography.html">Ekipman</a></li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="pages/ui-features/typography.html">Araç</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                  <a href="pages/icons/mdi.html" class="nav-link">
+                    <i class="mdi mdi-emoticon menu-icon"></i>
+                    <span class="menu-title">Musteriler</span>
+                    <i class="menu-arrow"></i>
+                  </a>
+                  
+              </li>
+              
+              <li class="nav-item">
+                  <a href="docs/documentation.html" class="nav-link">
+                    <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+                    <span class="menu-title">E-Ticaret </span></a>
+              </li>
+  
+              <li class="nav-item">
+                <a href="pages/tables/basic-table.html" class="nav-link">
+                  <i class="mdi mdi-grid menu-icon"></i>
+                  <span class="menu-title">Uygulamalar</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="submenu">
+                  <ul>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages/ui-features/buttons.html">Teknik Servis</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/buttons.html">Chat</a></li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/typography.html">Dosya Aktarımı</a></li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="pages/ui-features/typography.html">Mail</a></li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="pages/ui-features/typography.html">Araç Takip</a></li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="pages/ui-features/typography.html">Personel Takip</a></li>
+                  </ul>
+              </div>
+            </li>  
+            
+            </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+</body>
+</html>
+
+
+<script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js'%}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js'%}"></script>
+<!-- Sparkline -->
+<script src="{% static 'plugins/sparklines/sparkline.js'%}"></script>
+<!-- JQVMap -->
+<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js'%}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js'%}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/jquery-knob/jquery.knob.min.js'%}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js'%}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js'%}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+<!-- Summernote -->
+<script src="{% static 'plugins/summernote/summernote-bs4.min.js'%}"></script>
+<!-- overlayScrollbars -->
+<script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'%}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dist/js/adminlte.js'%}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dist/js/demo.js'%}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{% static 'dist/js/pages/dashboard.js'%}"></script>
+
+
+
+<!-- ****************************************************** -->
+
+<script src="{% static 'js/chart.js'%}"></script>
+<script src="{% static 'vendors/chart/Chart.min.js' %}"></script>
+<script src="{% static 'js/template.js' %} "></script>
+<script src="{% static 'vendors/base/vendor.bundle.base.js' %}"></script>

@@ -6,5 +6,6 @@ urlpatterns = [
 
     path("Takvim/",views.Uretimindex,name="UretimHome"),
     path("Bolumler/",views.UretimBolumleri,name="Bolumler"),
+    path("Siparis/",views.SiparisTakip,name="Siparisler")
 
 ]

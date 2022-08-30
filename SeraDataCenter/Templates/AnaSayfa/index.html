@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,239 +7,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Data Center | Sera Reklam</title>
 
-	{% include 'Base/Headers.html'%}
-
-
-   
-  </head>
-  <body>
-    <div class="container-scroller">
-		
-		<!-- partial:partials/_horizontal-navbar.html -->
     
 
-		{% include 'Base/Menu.html' %}
-    <!-- partial -->
-		<div class="container-fluid page-body-wrapper">
-			<div class="main-panel">
-				<div class="content-wrapper">
-					<div class="row">
-						<div class="col-sm-12 mb-4 mb-xl-1">
-							<hr>
-							<h3 style="font-weight:bold ;">
-							
-								Genel Bilgilendirme
-							</h3>
-							
-							<hr>
-						</div>
-						
-					</div>
-					<div class="row">
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-success font-weight-bold" style="font-size: 50px;">60</h2>
-										<i class="mdi mdi-account-outline mdi-18px text-dark"></i>
-									</div>
-								</div>
-								<canvas id="newClient"></canvas>
-								<div class="line-chart-row-title">Personel Sayısı</div>
-							</div>
-						</div>
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-danger font-weight-bold" style="font-size: 50px;">681</h2>
-										<i class="mdi mdi-refresh mdi-18px text-dark"></i>
-									</div>
-								</div>
-								<canvas id="allProducts"></canvas>
-								<div class="line-chart-row-title">Ürünler</div>
-							</div>
-						</div>
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-info font-weight-bold" style="font-size: 50px;">3</h2>
-										<i class="mdi mdi-file-document-outline mdi-18px text-dark"></i>
-									</div>
-								</div>
-								<canvas id="invoices"></canvas>
-								<div class="line-chart-row-title">Güncel Rapor</div>
-							</div>
-						</div>
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-warning font-weight-bold">5</h2>
-										<i class="mdi mdi-folder-outline mdi-18px text-dark"></i>
-									</div>
-								</div>
-								<canvas id="projects"></canvas>
-								<div class="line-chart-row-title">Haftalık Magaza Üretim</div>
-							</div>
-						</div>
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-secondary font-weight-bold">3</h2>
-										<i class="mdi mdi-cart-outline mdi-18px text-dark"></i>
-									</div>
-								</div>
-								<canvas id="orderRecieved"></canvas>
-								<div class="line-chart-row-title">Haftalık Montaj</div>
-							</div>
-						</div>
-						<div class="col-lg-2 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body pb-0">
-									<div class="d-flex align-items-center justify-content-between">
-										<h2 class="text-dark font-weight-bold">18</h2>
-										<i class="mdi mdi-cash text-dark mdi-18px"></i>
-									</div>
-								</div>
-								<canvas id="transactions"></canvas>
-								<div class="line-chart-row-title">Aylık Sevkiyat / Agustos</div>
-							</div>
-						</div>
-					</div>
-					
+	{% include 'Base/Headers.html'%}
 
-					<div class="row">
-						<div class="col-sm-8 flex-column d-flex stretch-card">
-							<div class="row">
-								<div class="col-lg-4 d-flex grid-margin stretch-card">
-									
-									<div class="card bg-primary">
-										
-										<div class="card-body text-white">
-											  
-											<h3 class="font-weight-bold mb-3">Veri Alanı</h3>
-											
-											<p class="pb-0 mb-0"> #####</p>
-										
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 d-flex grid-margin stretch-card">
-									<div class="card sale-diffrence-border">
-										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold">######</h2>
-											<h4 class="card-title mb-2">######</h4>
-											<small class="text-muted">######</small>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 d-flex grid-margin stretch-card">
-									<div class="card sale-visit-statistics-border">
-										<div class="card-body">
-											<h2 class="text-dark mb-2 font-weight-bold">######</h2>
-											<h4 class="card-title mb-2">######</h4>
-											<small class="text-muted">######</small>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-						
+  </head>
 
-						</div>
-						<div class="col-sm-4 flex-column d-flex stretch-card">
-							<div class="row flex-grow">
-								<div class="col-sm-12 grid-margin stretch-card">
-									<div class="card">
-										<div class="card-body">
-											<div class="row">
-												<div class="col-lg-8">
-													<h3 class="font-weight-bold text-dark">Ankara,Turkey</h3>
-													<p class="text-dark">(Saat Bilgisi)</p>
-													<div class="d-lg-flex align-items-baseline mb-3">
-														<h1 class="text-dark font-weight-bold">28<sup class="font-weight-light"><small>o</small><small class="font-weight-medium">c</small></sup></h1>
-														<p class="text-muted ms-3">Sıcalık</p>
-													</div>
-												</div>
-												<div class="col-lg-4">
-													<div class="position-relative">
-														<img src="images/dashboard/live.png" class="w-100" alt="">
-														<div class="live-info badge badge-success">Live</div>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-sm-12 mt-4 mt-lg-0">
-													<div class="bg-primary text-white px-4 py-4 card">
-														<div class="row">
-															<div class="col-sm-6 pl-lg-5">
-																<h2>2.894.452 TL</h2>
-																<p class="mb-0">Aylık Gelir</p>
-															</div>
-															<div class="col-sm-6 climate-info-border mt-lg-0 mt-2">
-																<h2>1.856.487 TL</h2>
-																<p class="mb-0">Aylık Gider</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="row pt-3 mt-md-1">
-												<div class="col">
-													<div class="d-flex purchase-detail-legend align-items-center">
-														<div id="circleProgress1" class="p-2"></div>
-														<div>
-															<p class="font-weight-medium text-dark text-small">Gider</p>
-															<h3 class="font-weight-bold text-dark  mb-0">10%</h3>
-														</div>
-													</div>
-												</div>
-												<div class="col">
-													<div class="d-flex purchase-detail-legend align-items-center">
-														<div id="circleProgress2" class="p-2"></div>
-														<div>
-															<p class="font-weight-medium text-dark text-small">Gelir</p>
-															<h3 class="font-weight-bold text-dark  mb-0">12.80%</h3>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					
-					
-					
-				</div>
-				<!-- content-wrapper ends -->
+  <body>
+    {% include 'Base/Menu.html' %}
 
+    <hr>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel bg-gradient-light">
+          <div class="content-wrapper">
+            <!-- UST PANEL  -->
+            <div class="col-sm-12">
+              <div class="row" style="height: 20px ;">
+                
+                <div class="col-sm-4 text-left">
+                  <div class="container">
+                    Genel Bilgilendirme
+                  </div> 
+                 
+                </div>
+                <div class="col-sm-4 text-center">
+                  <div class="container">
+                    01/09/2022 - 15:00
+                  </div> 
+                </div>
+                <div class="col-sm-4 text-end" >
+                  <div class="container"  >
+                    <a href="#" class="btn btn-danger btn-sm " role="button" aria-disabled="true">+ Sipariş</a>
+                    <a href="#" class="btn btn-primary btn-sm " role="button" aria-disabled="true">+ Proje</a>
+                    <a href="{% url 'M_GunlukRapor'%}" class="btn btn-success btn-sm " role="button" aria-disabled="true">Rapor</a>
+                  </div> 
+                </div>
 
-				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-          <div class="footer-wrap bg-light">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © All Right Reserverd | Ömer ÖZYÜREK  2022</span>
-			  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"> Version  1.0.0 </span>
+              </div>
             </div>
-          </div>
-        </footer>
-				<!-- partial -->
-			</div>
-			<!-- main-panel ends -->
-		</div>
-		<!-- page-body-wrapper ends -->
+            
+            <hr style="color:rgb(47, 0, 255) ;">
+            <!-- ORTA BOLUM  -->
+
+            <div class="container">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="card" style="align-items:center ; background-color: rgb(154, 161, 129);">
+                      <div class="card-body bg-gradient-primary" style=" align-items: center;">
+                        <a href="{% url 'RaporAnaSayfa'%}" class="btn btn-fix text-left">
+                          <h4 class="text-danger" style="color: red; height: 30px;"> 60 </h4>
+                            <div class="card-block ">
+                                <h4 class="card-title text-light ">Personel Sayısı</h4>
+                                <p class="card-text text-light ">Günlük Personel Sayısı Bilgisi</p>
+                                <p class="card-text "><large class="text-info">31/08/2022</large></p>
+                            </div>
+                        </a>
+                      </div>
+                   </div>
+
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card" style="align-items:center ; background-color: aliceblue;">
+                      <div class="card-body bg-gradient-primary" style=" align-items: center;">
+                        <a href="{% url 'RaporAnaSayfa'%}" class="btn btn-fix text-left">
+                          <h4 class="text-danger" style="color: red; height: 30px;"> 60 </h4>
+                            <div class="card-block ">
+                                <h4 class="card-title text-light ">Personel Sayısı</h4>
+                                <p class="card-text text-light ">Günlük Personel Sayısı Bilgisi</p>
+                                <p class="card-text "><large class="text-info">31/08/2022</large></p>
+                            </div>
+                        </a>
+                      </div>
+                   </div>
+
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="card" style="align-items:center ; background-color: rgb(119, 119, 119);">
+                      <div class="card-body bg-gradient-primary" style=" align-items: center;">
+                        <a href="{% url 'RaporAnaSayfa'%}" class="btn btn-fix text-left">
+                          <h4 class="text-warning" style="color: rgb(255, 255, 255); font-size: 30px;"> 60 </h4>
+                            <div class="card-block ">
+                                <h4 class="card-title text-light ">Personel Sayısı</h4>
+                                <p class="card-text text-light ">Günlük Personel Sayısı Bilgisi</p>
+                                <p class="card-text "><large class="text-info">31/08/2022</large></p>
+                            </div>
+                        </a>
+                      </div>
+                   </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <hr>
+
+            <div class="container">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <div class="row justify-content-center align-items-center main-row">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="col shadow main-col bg-white">
+                            <div class="row bg-primary text-white">
+                              <div class="col  p-2">
+                                <h4>Günlük Yapılacak Listesi</h4>
+                              </div>
+                            </div>
+                            <div class="row justify-content-between text-white p-2">
+                              <div class="form-group  mb-4">
+                                <input id="todo-input" type="text" class="form-control" value="">
+                              </div>
+                              <button type="button" onclick="CreateTodo();" class="btn btn-primary mb-2 ml-2 ">Görev Ekle</button>
+                            </div>
+                            <div class="row" id="todo-container">
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <h3 class="font-weight-bold text-dark">ANKARA / Akyurt</h3>
+                            <p class="text-dark">Pazartes 08:30</p>
+                            <div class="d-lg-flex align-items-baseline mb-3">
+                              <h1 class="text-dark font-weight-bold">23<sup class="font-weight-light"><small>o</small><small class="font-weight-medium">c</small></sup></h1>
+                              
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div class="position-relative">
+                              <img src="images/dashboard/live.png" class="w-100" alt="">
+                              <div class="live-info badge badge-success">Live</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12 mt-4 mt-lg-0">
+                            <div class="bg-primary text-white px-4 py-4 card">
+                              <div class="row">
+                                <div class="col-sm-6 pl-lg-5">
+                                  <h2>1 $</h2>
+                                  <p class="mb-0">18.72 TL</p>
+                                </div>
+                                <div class="col-sm-6 climate-info-border mt-lg-0 mt-2">
+                                  <h2>1 €</h2>
+                                  <p class="mb-0">18.21 TL</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              
+
+
+            </div>
+
+            <hr style="color: red;">
+
+            <!-- CHART  -->
+
+            <!-- SALES  -->
+            <div class="container">
+              <div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-lg-4">
+											<h4 class="card-title">Sales Difference</h4>
+											<canvas id="salesDifference"></canvas>
+											<p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
+												consectetur adipisicing elit.
+											</p>
+										</div>
+										<div class="col-lg-5">
+											<h4 class="card-title">Best Sellers</h4>
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="graphl-legend-rectangle">
+														<li><span class="bg-danger"></span>Automotive</li>
+														<li><span class="bg-warning"></span>Books</li>
+														<li><span class="bg-info"></span>Software</li>
+														<li><span class="bg-success"></span>Video games</li>
+													</ul>
+												</div>
+												<div class="col-sm-8 grid-margin">
+													<canvas id="bestSellers"></canvas>
+												</div>
+											</div>
+											<p class="mt-3 mb-4 mb-lg-0">Lorem ipsum dolor sit amet,
+												consectetur adipisicing elit.
+											</p>
+										</div>
+										<div class="col-lg-3">
+											<h4 class="card-title">Social Media Statistics</h4>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="progress progress-lg grouped mb-2">
+														<div class="progress-bar  bg-danger" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+														<div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														<div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+														<div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+												</div>
+												<div class="col-sm-12">
+													<ul class="graphl-legend-rectangle">
+														<li><span class="bg-danger"></span>Instagram (15%)</li>
+														<li><span class="bg-warning"></span>Facebook (20%)</li>
+														<li><span class="bg-info"></span>Website (25%)</li>
+														<li><span class="bg-success"></span>Youtube (40%)</li>
+													</ul>
+												</div>
+											</div>
+											<p class="mb-0 mt-2">Lorem ipsum dolor sit amet,
+												consectetur adipisicing elit.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+            </div>
+               <!-- SALES  -->
+            
+               <hr style="color: blue;">
+
+
+            <!-- CHART  -->
+            <div class="container-fluid">
+              <div class="row" >
+                <div class="col-sm-12 d-flex justify-content-between justify-content-sm-between">
+                  <div class="container-fluid page-body-wrapper">
+                    <div class="main-panel">
+                      <div class="content-wrapper">
+                        <div class="row">
+                          <div class="col-lg-6 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">Doughnut chart</h4>
+                                <canvas id="doughnutChart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 grid-margin stretch-card">
+                            <div class="card">
+                              <div class="card-body">
+                                <h4 class="card-title">Bar chart</h4>
+                                <canvas id="barChart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <!-- main-panel ends -->
+                  </div>
+                  
+                  <!-- ======================================================================================================= -->
+                
+  
+                </div>
+  
+              </div>
+  
+  
+            </div>
+
+            <!-- CHART  -->
+
+            <hr style="color: red;">
+            
+            
+          
+          </div>  
+            
+          
+        </div>
+      </div>
     </div>
-		<!-- container-scroller -->
-    <!-- base:js -->
+    {% include 'Base/Footer.html'%}
+    {% include 'Base/JavaCodes.html'%}
 
-	{% include 'Base/JavaCodes.html'%}
+    <script src="{% static 'vendors/base/vendor.bundle.base.js'%}"></script>
+ 
+    <script src="{% static 'js/template.js'%}"></script>
+   
+    <script src="{% static 'vendors/chart.js/Chart.min.js'%}"></script>
+   
+    <script src="{% static 'js/chart.js'%}"></script>
+   
+	</body>
 
-  </body>
-</html>
+  
+ 
+
+
+
+  </html>
+
+

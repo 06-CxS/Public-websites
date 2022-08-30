@@ -23,5 +23,6 @@ urlpatterns = [
     path('Uretim/',include("Uretim.urls")),
     path('Muhasebe/',include("Muhasebe.urls")),
     path('Sevkiyat/',include("Sevkiyat.urls")),
+    path('Fabrika/',include("Fabrika.urls")),
     
 ]

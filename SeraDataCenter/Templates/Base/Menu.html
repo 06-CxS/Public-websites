@@ -11,24 +11,21 @@
 <body>
 
   
-<div class="horizontal-menu">
-    <nav class="navbar top-navbar col-lg-12 col-12 p-0 bg-light ">
+  <div class="horizontal-menu">
+    <nav class="navbar top-navbar col-lg-12 col-12 p-1">
       <div class="container-fluid">
-        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between" style="height: 50px;">
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-between" style="background-color: rgb(137, 64, 255); height: 48px; border-radius: 10px;">
           <ul class="navbar-nav navbar-nav-left">
-            <li class="nav-item ms-0 me-5 d-lg-flex d-none">
-              <a href="#" class="nav-link horizontal-nav-left-menu"><i class="mdi mdi-format-list-bulleted"></i></a>
+            <li class="nav-item ms-0 me-3 d-lg-flex d-none">
+              
             </li>
-            
-            <!-- BİLDİRİM #############################  -->
-
             <li class="nav-item dropdown">
               <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                 <i class="mdi mdi-bell mx-0"></i>
-                <span class="count bg-success">5</span>
+                <span class="count bg-success">2</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                <p class="mb-0 font-weight-normal float-left dropdown-header">Bildirimler</p>
+                <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
                 <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                       <div class="preview-icon bg-success">
@@ -36,9 +33,9 @@
                       </div>
                   </div>
                   <div class="preview-item-content">
-                      <h6 class="preview-subject font-weight-normal"> BİLDİRİM 1</h6>
+                      <h6 class="preview-subject font-weight-normal">Application Error</h6>
                       <p class="font-weight-light small-text mb-0 text-muted">
-                        ÜRETİM
+                        Just now
                       </p>
                   </div>
                 </a>
@@ -49,9 +46,9 @@
                       </div>
                   </div>
                   <div class="preview-item-content">
-                      <h6 class="preview-subject font-weight-normal">BİLDİRİM 2</h6>
+                      <h6 class="preview-subject font-weight-normal">Settings</h6>
                       <p class="font-weight-light small-text mb-0 text-muted">
-                        ÜRETİM
+                        Private message
                       </p>
                   </div>
                 </a>
@@ -62,21 +59,59 @@
                       </div>
                   </div>
                   <div class="preview-item-content">
-                      <h6 class="preview-subject font-weight-normal"> BİLDİRİM 3</h6>
+                      <h6 class="preview-subject font-weight-normal">New user registration</h6>
                       <p class="font-weight-light small-text mb-0 text-muted">
-                        MUHASEBE
+                        2 days ago
                       </p>
                   </div>
                 </a>
               </div>
             </li>
-
-            <!-- BİLDİRİM SON ######################### -->
-
-            <!-- MESAJLAR ############################## -->
-            <!-- MESAJLAR SON ##########################-->
-            
-
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
+                <i class="mdi mdi-email mx-0"></i>
+                <span class="count bg-primary">4</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                      <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal">David Grey
+                      </h6>
+                      <p class="font-weight-light small-text text-muted mb-0">
+                        The meeting is cancelled
+                      </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                      <img src="images/faces/face2.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal">Tim Cook
+                      </h6>
+                      <p class="font-weight-light small-text text-muted mb-0">
+                        New product launch
+                      </p>
+                  </div>
+                </a>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                      <img src="images/faces/face3.jpg" alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content flex-grow">
+                      <h6 class="preview-subject ellipsis font-weight-normal"> Johnson
+                      </h6>
+                      <p class="font-weight-light small-text text-muted mb-0">
+                        Upcoming board meeting
+                      </p>
+                  </div>
+                </a>
+              </div>
+            </li>
             
             <li class="nav-item nav-search d-none d-lg-block ms-3">
               <div class="input-group">
@@ -89,49 +124,31 @@
               </div>
             </li>	
           </ul>
+         
           <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-              
-              <p style="font-size:25px; color:red; font-weight: bold;" > DATA CENTER | SERA REKLAM  </p>
+              <a class="navbar-brand brand-logo" style="font-size: x-large; color: aliceblue;" href="{% url 'Home'%} ">DATA CENTER | SERA REKLAM</a>
           </div>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown d-lg-flex d-none">
-              <button type="button" class="btn btn-inverse-primary btn-sm">Ürünler</button>
-            </li>
-              <li class="nav-item dropdown  d-lg-flex d-none">
-                <button type="button" class="btn btn-inverse-danger btn-sm"> + Siparis  </button>
-              </li>
-              <li class="nav-item dropdown d-lg-flex d-none">
-                <a class="dropdown-toggle show-dropdown-arrow btn btn-inverse-primary btn-sm" id="nreportDropdown" href="#" data-bs-toggle="dropdown">
-                Raporlar
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="nreportDropdown">
-                    <p class="mb-0 font-weight-medium float-left dropdown-header">Rapor</p>
-                    <a class="dropdown-item" href="{% url 'RaporAnaSayfa'%}">
-                      <i class="mdi mdi-trending-up text-danger"></i>
-                      Günlük
-                    </a>
-                    
-                    <a class="dropdown-item" href="{% url 'WeekReports' %}">
-                      <i class="mdi mdi-trending-up text-danger"></i>
-                      Haftalık
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="mdi mdi-trending-up text-danger"></i>
-                      Aylık
-                    </a>
-                </div>
-              </li>
-              
+         
+         
+          <ul class="navbar-nav navbar-nav-right" style="padding: 15px;">
               <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                  <span class="nav-profile-name">Ömer ÖZYÜREK</span>
+                <a class="nav-link dropdown-toggle"  href="#" data-bs-toggle="dropdown" id="profileDropdown">
+                  <span class="nav-profile-name" style="color:rgb(214, 214, 214) ;" >Ömer ÖZYÜREK</span>
                   <span class="online-status"></span>
-                 
+                  <img src="{% static 'images/faces/face1.jpg'%}" alt="profile"/>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item">
+                  <a class="dropdown-item">
+                    <i class="mdi mdi-settings text-primary"></i>
+                    Profil
+                  </a>  
+                  <a class="dropdown-item">
                       <i class="mdi mdi-settings text-primary"></i>
                       Ayarlar
+                    </a>
+                    <a class="dropdown-item">
+                      <i class="mdi mdi-logout text-primary"></i>
+                      Yardım
                     </a>
                     <a class="dropdown-item">
                       <i class="mdi mdi-logout text-primary"></i>
@@ -140,16 +157,15 @@
                 </div>
               </li>
           </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
-            <span class="mdi mdi-menu"></span>
-          </button>
+          
+        
         </div>
       </div>
     </nav>
-    <nav class="bottom-navbar"  style="height: 78px;">
+    <nav class="bottom-navbar"  style="height: 65px;">
       <div class="container">
-          <ul class="nav page-navigation" >
-            <li class="nav-item">
+          <ul class="nav page-navigation " id="#" >
+            <li class="nav-item ">
               <a class="nav-link" href="{% url 'Home'%}">
                 <i class="mdi mdi-file-document-box menu-icon"></i>
                 <span class="menu-title">Ana Sayfa</span>
@@ -157,7 +173,7 @@
             </li>
             <!-- ÜRETİM ############ -->
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" id="#">
                 <i class="mdi mdi-cube-outline menu-icon"></i>
                 <span class="menu-title">Üretim</span>
                 <i class="menu-arrow"></i>
@@ -165,8 +181,13 @@
               <div class="submenu">
                   <ul>
                       <li class="nav-item">
-                        <a class="nav-link" href="{% url 'UretimHome' %}">Üretim Takvimi</a></li>
-                      <li class="nav-item"><a class="nav-link" href="{% url 'Bolumler' %}">Üretim Bölümleri</a></li>
+                        <a class="nav-link" href="{% url 'UretimHome' %}">Üretim Takvimi</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Siparisler' %}">Sipariş Takibi</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'Bolumler' %}">Üretim Bölümleri</a>
+                      </li>
                   </ul>
               </div>
           </li>
@@ -236,7 +257,7 @@
                 <div class="submenu">
                   <ul>
                       <li class="nav-item">
-                        <a class="nav-link" href="pages/ui-features/buttons.html">Personel</a></li>
+                        <a class="nav-link" href="{% url 'Takvim'%}">Personel</a></li>
                       <li class="nav-item">
                         <a class="nav-link" href="pages/ui-features/typography.html">Depo</a></li>
                         <li class="nav-item">
@@ -288,8 +309,10 @@
           </li>
           </ul>
       </div>
-    </nav>
+      </nav>
   </div>
+
+ 
 
 </body>
 </html>

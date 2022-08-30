@@ -1,0 +1,491 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataCenter | Rapor</title>
+
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{% static 'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+  <link rel="stylesheet" href="{% static 'plugins/datatables-buttons/css/buttons.bootstrap4.min.css' %}">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+
+
+  {% include 'Base/Headers.html'%}
+
+
+
+</head>
+<body >
+<div class="wrapper">
+
+    {% include 'Base/RaporMenu.html'%}
+<hr>
+  <div class="content-fluid bg-gradient-light">
+   
+     <!-- Content Header (Page header) -->
+     <section class="content-header">
+        <div class="container-fluid">
+          <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-4 text-left">
+                    <p style="font-size:20px ; color: rgb(153, 0, 255);">Haftalık Muhasebe Raporları</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    Rapor Tarihi : 01/09/2022
+                </div>
+                <div class="col-sm-4 text-right">
+                    <a href="{% url 'M_GunlukRapor'%}" class="btn btn-danger btn-sm  " role="button" aria-disabled="true">Günlük</a>
+                    <a href="{% url 'M_HaftalıkRapor'%}" class="btn btn-primary btn-sm " role="button" aria-disabled="true">Haftalık</a>
+                    <a href="{% url 'M_AylıkRapor'%}" class="btn btn-success btn-sm " role="button" aria-disabled="true">Aylık</a>
+                </div>
+
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+    </section>
+  
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card card-success">
+                  <div class="card-header">
+                        
+                    <small style="color: white; font-weight: bold; font-size: large;" > Kasa </small>
+                    <div class="card-tools">
+                      <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                        <i class="fas fa-sync-alt"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                        <i class="fas fa-expand"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                    <!-- /.card-tools -->
+                  </div>
+                  <!-- /.card-header -->
+
+                  <div class="card" style="background-color:rgb(246, 232, 253);">
+                    
+                    <div class="card-body">
+                      <table id="kasa" class="table table-bordered table-striped bg-gradient-light">
+                        <thead >
+                        <tr style="background-color:rgb(255, 185, 185) ;">
+                          <th>Banka</th>
+                          <th>Türk Lirası</th>
+                          <th>Dolar</th>
+                          <th>Euro</th>
+                          <th>Diger</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <th  scope="col">Garanti Bankası</th>
+                          <td>800</td>
+                          <td>5000</td>
+                          <td>30000</td>
+                          <td>#</td>
+                        </tr>
+                        <tr>
+                            <th  scope="col">Garanti Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Garanti Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Garanti Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Garanti Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+                          <tr>
+                            <th  scope="col">Garanti Bankası</th>
+                            <td>800</td>
+                            <td>5000</td>
+                            <td>30000</td>
+                            <td>#</td>
+                          </tr>
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                          <th>Toplam</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                          <th>#</th>
+                        </tr>
+                        </tfoot>
+                      </table>
+                      <hr>
+                    </div>
+      
+                    <!-- /.card-body -->
+                  </div>
+
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+
+            <!-- /.card -->
+         
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+    </section>
+
+
+    <div class="container-fluid">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-6">
+                    <section class="content">
+                        <div class="container-fluid">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="card card-success">
+                                    <div class="card-header">
+                                          
+                                      <small style="color: white; font-weight: bold; font-size: large;" > Kasa </small>
+                                      <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                                          <i class="fas fa-sync-alt"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                          <i class="fas fa-expand"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                          <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                          <i class="fas fa-times"></i>
+                                        </button>
+                                      </div>
+                                      <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                  
+                                    <div class="card" style="background-color:rgb(246, 232, 253);">
+                                      
+                                      <div class="card-body">
+                                        <table id="test2" class="table table-bordered table-striped bg-gradient-light">
+                                          <thead >
+                                          <tr style="background-color:rgb(255, 185, 185) ;">
+                                            <th>Banka</th>
+                                            <th>Türk Lirası</th>
+                                            <th>Dolar</th>
+                                            <th>Euro</th>
+                                            <th>Diger</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                          <tr>
+                                            <th  scope="col">Garanti Bankası</th>
+                                            <td>800</td>
+                                            <td>5000</td>
+                                            <td>30000</td>
+                                            <td>#</td>
+                                          </tr>
+                                          <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                  
+                                          </tbody>
+                                          <tfoot>
+                                          <tr>
+                                            <th>Toplam</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                          </tr>
+                                          </tfoot>
+                                        </table>
+                                        <hr>
+                                      </div>
+                        
+                                      <!-- /.card-body -->
+                                    </div>
+                  
+                                    <!-- /.card-body -->
+                                  </div>
+                                  <!-- /.card -->
+                                </div>
+                  
+                              <!-- /.card -->
+                           
+                            <!-- /.col -->
+                          </div>
+                          <!-- /.row -->
+                        </div>
+                      </section>
+                </div>
+                <div class="col-sm-6">
+                    <section class="content">
+                        <div class="container-fluid">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="card card-success">
+                                    <div class="card-header">
+                                          
+                                      <small style="color: white; font-weight: bold; font-size: large;" > Kasa </small>
+                                      <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="card-refresh" data-source="widgets.html" data-source-selector="#card-refresh-content" data-load-on-init="false">
+                                          <i class="fas fa-sync-alt"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                          <i class="fas fa-expand"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                          <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                          <i class="fas fa-times"></i>
+                                        </button>
+                                      </div>
+                                      <!-- /.card-tools -->
+                                    </div>
+                                    <!-- /.card-header -->
+                  
+                                    <div class="card" style="background-color:rgb(246, 232, 253);">
+                                      
+                                      <div class="card-body">
+                                        <table id="test3" class="table table-bordered table-striped bg-gradient-light">
+                                          <thead >
+                                          <tr style="background-color:rgb(255, 185, 185) ;">
+                                            <th>Banka</th>
+                                            <th>Türk Lirası</th>
+                                            <th>Dolar</th>
+                                            <th>Euro</th>
+                                            <th>Diger</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                          <tr>
+                                            <th  scope="col">Garanti Bankası</th>
+                                            <td>800</td>
+                                            <td>5000</td>
+                                            <td>30000</td>
+                                            <td>#</td>
+                                          </tr>
+                                          <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                                            <tr>
+                                              <th  scope="col">Garanti Bankası</th>
+                                              <td>800</td>
+                                              <td>5000</td>
+                                              <td>30000</td>
+                                              <td>#</td>
+                                            </tr>
+                  
+                                          </tbody>
+                                          <tfoot>
+                                          <tr>
+                                            <th>Toplam</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                            <th>#</th>
+                                          </tr>
+                                          </tfoot>
+                                        </table>
+                                        <hr>
+                                      </div>
+                        
+                                      <!-- /.card-body -->
+                                    </div>
+                  
+                                    <!-- /.card-body -->
+                                  </div>
+                                  <!-- /.card -->
+                                </div>
+                  
+                              <!-- /.card -->
+                           
+                            <!-- /.col -->
+                          </div>
+                          <!-- /.row -->
+                        </div>
+                      </section>
+                </div>
+                
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+    <!-- Main content -->
+  </div>
+  <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
+{% include 'Base/Footer.html' %}
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js'%}"></script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- DataTables  & Plugins -->
+<script src="{% static 'plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'plugins/jszip/jszip.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/pdfmake.min.js' %}"></script>
+<script src="{% static 'plugins/pdfmake/vfs_fonts.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'plugins/datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+
+
+<script>
+    $(function () {
+      $("#kasa").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": ["excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#kasa_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+<script>
+    $(function () {
+      $("#test2").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": ["excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#test2_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+<script>
+    $(function () {
+      $("#test3").DataTable({
+        "responsive": true, "lengthChange": false, paging:false, "autoWidth": false,
+        "buttons": [ "excel", "pdf", "print", ]
+      }).buttons().container().appendTo('#test3_wrapper .col-md-6:eq(0)');
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+
+</body>
+</html>
